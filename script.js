@@ -54,3 +54,35 @@ searchUnsplashImages(query, clientId, perPage)
   .catch((error) => {
     console.error("Error:", error);
   });
+
+// Add the appropriate number of blanks to fill in on the input modal
+function buildForm(apiResponse) {
+  for (let i = 0; i < apiResponse.blanks.length; i++) {
+    // Create input div
+    const inputDivEl = document.createElement("div");
+
+    // Create input label
+    const inputLabelEl = document.createElement("label");
+    inputLabelEl.classList.add(
+      "block",
+      "text-gray-700",
+      "text-sm",
+      "font-bold",
+      "mb-2"
+    );
+    inputLabelEl.setAttribute("for", `form-input-$${i}`);
+    inputLabelEl.innerText(`Enter a(n) ${apiResponse.blanks[i]}`);
+
+    // Create input element
+    const inputElement = document.createElement("input");
+    inputElement.setAttribute("id", `form-input-$${i}`);
+    inputElement.setAttribute("type", "text");
+
+    // Append label & input elements to div
+    inputDivEl.appendChild(inputLabelEl);
+    inputDivEl.appendChild(inputElement);
+
+    // Append div to form
+    formEl.appendChild(inputDivEl);
+  }
+}
