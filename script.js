@@ -12,25 +12,51 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
     // Handle the response data here
     const clientId = "z54n1ORKwgZ-TGu3-dTFhRFLTKXy1Mw7LGrS_yKL1vE";
     const perPage = 1;
-    const imgData = data.title
+    const imgData = data.title;
 
     console.log(data);
-    console.log(imgData)
+    console.log(imgData);
     searchUnsplashImages(imgData, clientId, perPage)
       .then((images) => {
-      images.forEach((image, index) => {
-      console.log(`Image ${index + 1}: ${image.urls.regular}`);
-    });
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
+        images.forEach((image, index) => {
+          console.log(`Image ${index + 1}: ${image.urls.regular}`);
+        });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
 
+    // Add the appropriate number of blanks to fill in on the input modal
+    function buildForm(apiResponse) {
+      for (let i = 0; i < apiResponse.blanks.length; i++) {
+        // Create input div
+        const inputDivEl = document.createElement("div");
 
-function collectInputData() {
+        // Create input label
+        const inputLabelEl = document.createElement("label");
+        inputLabelEl.classList.add(
+          "block",
+          "text-gray-700",
+          "text-sm",
+          "font-bold",
+          "mb-2"
+        );
+        inputLabelEl.setAttribute("for", `form-input-${i}`);
+        inputLabelEl.innerText(`Enter a(n) ${apiResponse.blanks[i]}`);
 
-}
+        // Create input element
+        const inputElement = document.createElement("input");
+        inputElement.setAttribute("id", `form-input-${i}`);
+        inputElement.setAttribute("type", "text");
 
+        // Append label & input elements to div
+        inputDivEl.appendChild(inputLabelEl);
+        inputDivEl.appendChild(inputElement);
+
+        // Append div to form
+        formEl.appendChild(inputDivEl);
+      }
+    }
   })
   .catch((error) => {
     // Handle errors here
@@ -38,7 +64,9 @@ function collectInputData() {
   });
 
 function searchUnsplashImages(query, clientId, perPage) {
-  const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=${perPage}`;
+  const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(
+    query
+  )}&per_page=${perPage}`;
   const headers = {
     "Accept-Version": "v1",
     Authorization: `Client-ID ${clientId}`,
@@ -57,5 +85,3 @@ function searchUnsplashImages(query, clientId, perPage) {
       return data.results;
     });
 }
-
-
