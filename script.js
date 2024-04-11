@@ -59,4 +59,3 @@ function searchUnsplashImages(query, clientId, perPage) {
 }
 
 
-
