@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mad Libs</title>
-</head>
-<body>
-    <h1>Hello Mad Libs</h1>
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body class="h-full">
+    <header>
+      <div class="navbar">
+        <button class="btn btn-ghost text-4xl my-3">Hello Mad Libs Game</button>
+      </div>
+    </header>
 
+    <main class="flex justify-center items-center h-full my-8">
+      <div class="card w-96 bg-secondary-content text-primary-content">
+        <div class="card-body">
+          <h2 class="card-title text-neutral-content">Let the fun begin:</h2>
+        
+          <!-- sample input -->
+          <!-- <p class="py-4">
+                <input
+                  type="text"
+                  placeholder="Noun"
+                  class="input input-bordered input-accent w-full max-w-xs"
+                />
+              </p> -->
+              
+              <div class="modal-action">
+                <form method="dialog">
+                  <button class="btn btn-outline btn-primary" type="submit" value="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+      </main>
 
-
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js"></script>
-    
-</body>
+  </body>
 </html>
