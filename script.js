@@ -58,6 +58,5 @@ function searchUnsplashImages(query, clientId, perPage) {
     });
 }
 
-// Example usage:
 
 
