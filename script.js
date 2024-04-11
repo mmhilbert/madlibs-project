@@ -10,7 +10,27 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
   })
   .then((data) => {
     // Handle the response data here
+    const clientId = "z54n1ORKwgZ-TGu3-dTFhRFLTKXy1Mw7LGrS_yKL1vE";
+    const perPage = 1;
+    const imgData = data.title
+
     console.log(data);
+    console.log(imgData)
+    searchUnsplashImages(imgData, clientId, perPage)
+      .then((images) => {
+      images.forEach((image, index) => {
+      console.log(`Image ${index + 1}: ${image.urls.regular}`);
+    });
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
+
+function collectInputData() {
+
+}
+
   })
   .catch((error) => {
     // Handle errors here
@@ -18,9 +38,7 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
   });
 
 function searchUnsplashImages(query, clientId, perPage) {
-  const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(
-    query
-  )}&per_page=${perPage}`;
+  const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(query)}&per_page=${perPage}`;
   const headers = {
     "Accept-Version": "v1",
     Authorization: `Client-ID ${clientId}`,
@@ -41,16 +59,5 @@ function searchUnsplashImages(query, clientId, perPage) {
 }
 
 // Example usage:
-const clientId = "z54n1ORKwgZ-TGu3-dTFhRFLTKXy1Mw7LGrS_yKL1vE";
-const query = "landscape";
-const perPage = 10;
 
-searchUnsplashImages(query, clientId, perPage)
-  .then((images) => {
-    images.forEach((image, index) => {
-      console.log(`Image ${index + 1}: ${image.urls.regular}`);
-    });
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
+
