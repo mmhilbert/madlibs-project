@@ -1,5 +1,6 @@
 console.log("madlib");
 const madLibsApiUrl = "https://madlibs-api.vercel.app/api/random";
+const formEl = document.querySelector("#form-el");
 
 fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
   .then((response) => {
@@ -22,6 +23,7 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
           console.log(`Image ${index + 1}: ${image.urls.regular}`);
         });
       })
+      .then(buildForm(data))
       .catch((error) => {
         console.error("Error:", error);
       });
@@ -42,7 +44,7 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
           "mb-2"
         );
         inputLabelEl.setAttribute("for", `form-input-${i}`);
-        inputLabelEl.innerText(`Enter a(n) ${apiResponse.blanks[i]}`);
+        inputLabelEl.innerText = `Enter a(n) ${apiResponse.blanks[i]}`;
 
         // Create input element
         const inputElement = document.createElement("input");
