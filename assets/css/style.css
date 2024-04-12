@@ -1,0 +1,33 @@
+input {
+    all: unset;
+    margin: auto;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+
+.input-form {
+    color: black;
+}
+.btn {
+    margin-left: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.modal-action {
+    display: block;
+    margin: auto;
+}
+
+.card {
+    
+    border: solid 1px black;
+}
+
+.card-title {
+    display: block;
+    margin: auto;
+    color: grey;
+}

@@ -58,11 +58,12 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
         const inputLabelEl = document.createElement("label");
         inputLabelEl.classList.add(
           "block",
-          "text-gray-700",
+          "text-black",
           "text-sm",
           "font-bold",
           "mb-2"
         );
+        inputDivEl.classList.add(`input-form`)
         inputLabelEl.setAttribute("for", `form-input-${i}`);
         inputLabelEl.innerText = `Enter a(n) ${apiResponse.blanks[i]}`;
 
