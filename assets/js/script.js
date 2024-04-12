@@ -40,6 +40,7 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
     searchUnsplashImages(imgData, clientId, perPage)
       .then((images) => {
         images.forEach((image, index) => {
+          localStorage.setItem("imageurl", image.urls.regular);
           console.log(`Image ${index + 1}: ${image.urls.regular}`);
         });
       })
