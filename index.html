@@ -13,9 +13,113 @@
   </head>
   <body class="h-full">
     <header>
-      <div class="navbar">
-        <button class="btn btn-ghost text-4xl my-3">Hello Mad Libs Game</button>
+
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              
+              <li>
+                <a>Noun</a>
+                <ul class="p-2">
+                  <li><a>Person, Place, or Thing</a></li>
+                <li><a>Examples: Bob Barker, Bangkok, Button</a></li>
+                <li><a>Plural: Men, Woman, Ducks, Cities, Hands</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a>Verb</a>
+                <ul class="p-2">
+                  <li><a>Indicates an action</a></li>
+                  <li><a>Examples: Dodge, Dip, Duck, Dive, Dodge</a></li>
+                  <li><a>Add -ing: Dodging, Dipping, Ducking</a></li>
+                  <li><a>Past Tense: Most verbs add -ed to the end:
+                    <br>Dodged, Jumped, Went, Gulped
+                  </a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a>Adjective</a>
+                <ul class="p-2">
+                  <li><a>Describes a noun or pronoun</a></li>
+                  <li><a>Examples: Big, Small, Hot, Cold, Blue, </a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a>Adverb</a>
+                <ul class="p-2">
+                  <li><a>Used to modify or describe a verb,
+                    <br> adjective, another adverb, or entire sentence</a></li>
+                  <li><a>Example: Quickly, Incredibly, Extremely, Slowly</a></li>
+                </ul>
+              </li>
+              
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl">MadLibs</a>
+          <details>
+            <summary class="space-x-4">Instructions</summary>
+            <ul class="p-1">
+              <li><a>Fill out the form according to the requested inputs. 
+                <br>Please be creative! Your words shape your story. 
+                <br>After you complete all inputs click the submit button and enjoy! 
+                <br>If you need examples of what each input is refer to the navbar.</a></li>
+              
+            </ul>
+          </details>
+        </div>
+        
+        <div class="navbar-end hidden lg:flex ">
+          <ul class="menu menu-horizontal px-1">
+
+            
+
+            <details>
+              <summary class="space-x-4">Noun</summary>
+              <ul class="p-1">
+                <li><a>Person, Place, or Thing</a></li>
+                <li><a>Examples: Bob Barker, Bangkok, Button</a></li>
+                <li><a>Plural: Men, Woman, Ducks, Cities, Hands</a></li>
+              </ul>
+            </details>
+            
+              <details>
+                <summary class="space-x-4">Verb</summary>
+                <ul class="p-1">
+                  <li><a>Indicates an action</a></li>
+                  <li><a>Examples: Dodge, Dip, Duck, Dive, Dodge</a></li>
+                  <li><a>Add -ing: Dodging, Dipping, Ducking</a></li>
+                  <li><a>Past Tense: Most verbs add -ed to the end:
+                    <br>Dodged, Jumped, Went, Gulped
+                  </a></li>
+                </ul>
+              </details>
+            
+            <details>
+              <summary class="space-x-4">Adjective</summary>
+              <ul class="p-1">
+                <li><a>Describes a noun or pronoun</a></li>
+                <li><a>Examples: Big, Small, Hot, Cold, Blue, </a></li>
+              </ul>
+            </details>
+            <details>
+              <summary class="space-x-4">Adverb</summary>
+              <ul class="p-1">
+                <li><a>Used to modify or describe a verb,
+                  <br> adjective, another adverb, or entire sentence</a></li>
+                <li><a>Example: Quickly, Incredibly, Extremely, Slowly</a></li>
+              </ul>
+            </details>
+          </ul>
+        </div>
       </div>
+
     </header>
 
     <main class="flex justify-center items-center h-full my-8">
