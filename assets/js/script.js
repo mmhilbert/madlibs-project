@@ -1,14 +1,14 @@
 console.log("madlib");
 const madLibsApiUrl = "https://madlibs-api.vercel.app/api/random";
-const formEl = document.querySelector("#form-el");
+const formInputEl = document.querySelector("#input-elements");
 
 const submitButton = document.getElementById("btn");
 
-formEl.addEventListener("submit", function (event) {
+formInputEl.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const formData = {};
-  const inputs = formEl.querySelectorAll('input[type="text"]');
+  const inputs = formInputEl.querySelectorAll('input[type="text"]');
   inputs.forEach((input) => {
     formData[input.id] = input.value;
   });
@@ -19,7 +19,7 @@ formEl.addEventListener("submit", function (event) {
 
   console.log("Form data submitted and stored in local storage.");
 
-  formEl.reset();
+  formInputEl.reset();
 });
 
 fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
@@ -63,7 +63,7 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
           "font-bold",
           "mb-2"
         );
-        inputDivEl.classList.add(`input-form`)
+        inputDivEl.classList.add(`input-form`);
         inputLabelEl.setAttribute("for", `form-input-${i}`);
         inputLabelEl.innerText = `Enter a(n) ${apiResponse.blanks[i]}`;
 
@@ -77,7 +77,7 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
         inputDivEl.appendChild(inputElement);
 
         // Append div to form
-        formEl.appendChild(inputDivEl);
+        formInputEl.appendChild(inputDivEl);
       }
       // Save story to local storage
       localStorage.setItem("storytext", JSON.stringify(apiResponse.text));
