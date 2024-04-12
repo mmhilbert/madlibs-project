@@ -2,11 +2,37 @@ console.log("madlib");
 const madLibsApiUrl = "https://madlibs-api.vercel.app/api/random";
 const formEl = document.querySelector("#form-el");
 
+const submitButton =  document.getElementById('btn')
+
+formEl.addEventListener('submit', function(event) {
+  event.preventDefault(); 
+  
+  
+  const formData = {};
+  const inputs = formEl.querySelectorAll('input[type="text"]');
+  inputs.forEach(input => {
+    formData[input.id] = input.value;
+  });
+
+ 
+  const formDataJSON = JSON.stringify(formData);
+
+ 
+  localStorage.setItem('submittedData', formDataJSON);
+
+  
+  console.log('Form data submitted and stored in local storage.');
+  
+  
+  formEl.reset();
+});
+
+  
 fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
+.then((response) => {
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
     return response.json();
   })
   .then((data) => {
@@ -65,6 +91,7 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
     console.error("Error:", error);
   });
 
+
 function searchUnsplashImages(query, clientId, perPage) {
   const url = `https://api.unsplash.com/search/photos?query=${encodeURIComponent(
     query
@@ -86,4 +113,7 @@ function searchUnsplashImages(query, clientId, perPage) {
     .then((data) => {
       return data.results;
     });
-}
+  }
+  
+  
+
