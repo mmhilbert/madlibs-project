@@ -8,6 +8,7 @@ summary {
 
 .navbar {
     background-color: black;
+    
 }
 
 #mad-btn {
@@ -22,7 +23,9 @@ li {
 
 ul {
     background-color: black;
+    border-radius: 0;
 }
+
 
 /* .dropdown-content {
     position: absolute;
@@ -46,8 +49,9 @@ input {
 }
 
 
+
 .input-form {
-    color: black;
+    color: rgb(138, 138, 138);
 }
 .btn {
     margin-left: 25%;
