@@ -1,18 +1,43 @@
 summary {
-    margin-right: 50px;
+    margin-right: 10px;
     font-size: 20px;
     font-weight: bold;
 }
 
-.navbar-start {
-/* background-color: */
+
+
+.navbar {
+    background-color: black;
 }
 
-.navbar-end {
-/* background-color:  */
+#mad-btn {
+    font-size: 50px; 
+    margin-left: -10px;
+    font-weight: bold;
 }
 
+li {
+    z-index: 1;
+}
+
+ul {
+    background-color: black;
+}
+
+/* .dropdown-content {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    display: none;
+    z-index: 1000;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  } */
+
+ 
 input {
+   
     all: unset;
     margin: auto;
     background-color: white;
