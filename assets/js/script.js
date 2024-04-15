@@ -20,6 +20,7 @@ submitButton.addEventListener("click", function (event) {
   console.log("Form data submitted and stored in local storage.");
 
   formEl.reset();
+  window.location.href = "results.html";
 });
 
 fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
