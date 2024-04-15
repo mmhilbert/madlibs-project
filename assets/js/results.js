@@ -1,6 +1,8 @@
 const imageUrl = localStorage.getItem("imageurl");
 const storyArray = JSON.parse(localStorage.getItem("storytext"));
 const inputArray = JSON.parse(localStorage.getItem("submittedData"));
+const imageEl = document.querySelector("img");
+const storyEl = document.querySelector("#story-text");
 
 console.log(imageUrl);
 console.log(storyArray);
@@ -20,6 +22,10 @@ function buildStory() {
   return storyText;
 }
 
-const storyText = buildStory();
+// Setting the image to the correct source
+imageEl.setAttribute("src", imageUrl);
 
+// Setting the story to the stitched-together story text
+const storyText = buildStory();
 console.log(`Story: ${storyText}`);
+storyEl.innerText = storyText;
