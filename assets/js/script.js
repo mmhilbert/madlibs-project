@@ -59,7 +59,7 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
         const inputLabelEl = document.createElement("label");
         inputLabelEl.classList.add(
           "block",
-          "text-black",
+          "text-gray",
           "text-sm",
           "font-bold",
           "mb-2"
