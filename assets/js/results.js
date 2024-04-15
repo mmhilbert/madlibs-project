@@ -15,7 +15,7 @@ function buildStory() {
   for (let i = 0; i < storyArray.length; i++) {
     storyText += storyArray[i];
 
-    if (i <= inputArray.length) {
+    if (i < inputArray.length) {
       storyText += inputArray[i];
     }
   }
