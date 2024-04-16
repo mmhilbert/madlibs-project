@@ -35,8 +35,11 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
     const clientId = "z54n1ORKwgZ-TGu3-dTFhRFLTKXy1Mw7LGrS_yKL1vE";
     const perPage = 1;
     const imgData = data.title;
+    const storyTitle = data.title;
 
-    console.log(data);
+    // Save story title to local storage
+    localStorage.setItem("storyTitle", storyTitle);
+
     console.log(imgData);
     searchUnsplashImages(imgData, clientId, perPage)
       .then((images) => {
