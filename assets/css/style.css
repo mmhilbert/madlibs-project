@@ -4,7 +4,9 @@ summary {
     font-weight: bold;
 }
 
-
+.menu {
+    flex-wrap: nowrap;
+}
 
 .navbar {
     background-color: black;
