@@ -1,4 +1,46 @@
+summary {
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+.navbar {
+    background-color: black;
+    
+}
+
+#mad-btn {
+    font-size: 50px; 
+    margin-left: -10px;
+    font-weight: bold;
+}
+
+li {
+    z-index: 1;
+}
+
+ul {
+    background-color: black;
+    border-radius: 0;
+}
+
+
+/* .dropdown-content {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    display: none;
+    z-index: 1000;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  } */
+
+ 
 input {
+   
     all: unset;
     margin: auto;
     background-color: white;
@@ -7,27 +49,27 @@ input {
 }
 
 
+
 .input-form {
-    color: black;
+    color: rgb(138, 138, 138);
 }
 .btn {
     margin-left: 25%;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 .modal-action {
     display: block;
     margin: auto;
 }
-
 .card {
-    
     border: solid 1px black;
 }
-
 .card-title {
     display: block;
     margin: auto;
     color: grey;
+}
+.block {
+    max-width: 186px;
 }

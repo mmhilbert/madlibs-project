@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,11 +12,136 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body class="h-full">
+
     <header>
-      <div class="navbar">
-        <button class="btn btn-ghost text-4xl my-3">Hello Mad Libs Game</button>
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class ="flex justify-start">
+          <a href="https://github.com/chroline/madlibs-api" target="_blank" class="btn btn-ghost" id="mad-btn">Madlibs</a>
+        </div>
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+
+              <li>
+                <a>Instructions</a>
+                <ul class="p-2">
+                  <li><a>Fill out the form according to the requested inputs.
+                    Please be creative! Your words shape your story.
+                    After you complete all inputs click the submit button and enjoy!
+                    If you need examples of what each input is refer to the navbar.</a></li>
+                
+               
+                </ul>
+              </li>
+              
+              <li>
+                <a>Noun</a>
+                <ul class="p-2">
+                  <li><a>Person, Place, or Thing</a></li>
+                <li><a>Examples: Bob Barker, Bangkok, Button</a></li>
+                <li><a>Plural: Men, Woman, Ducks, Cities, Hands</a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a>Verb</a>
+                <ul class="p-2">
+                  <li><a>Indicates an action</a></li>
+                  <li><a>Examples: Dodge, Dip, Duck, Dive, Dodge</a></li>
+                  <li><a>Add -ing: Dodging, Dipping, Ducking</a></li>
+                  <li><a>Past Tense: Most verbs add -ed to the end:
+                    <br>Dodged, Jumped, Went, Gulped
+                  </a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a>Adjective</a>
+                <ul class="p-2">
+                  <li><a>Describes a noun or pronoun</a></li>
+                  <li><a>Examples: Big, Small, Hot, Cold, Blue, </a></li>
+                </ul>
+              </li>
+
+              <li>
+                <a>Adverb</a>
+                <ul class="p-2">
+                  <li><a>Used to modify or describe a verb,
+                    <br> adjective, another adverb, or entire sentence</a></li>
+                  <li><a>Example: Quickly, Incredibly, Extremely, Slowly</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      <!--Begin Navbar Dropdowns here-->
+      <div class="navbar-end hidden lg:flex "> 
+        <ul class="menu menu-horizontal px-1">
+          <li> 
+            <details>
+              <summary>Instructions</summary>
+              <ul class="p-2">
+                <li><a>Fill out the form according to the requested inputs.
+                  Please be creative! Your words shape your story.
+                  After you complete all inputs click the submit button and enjoy!
+                  If you need examples of what each input is refer to the navbar.</a></li>
+              
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Noun</summary>
+              <ul class="p-2">
+                <li><a>Person, Place, or Thing</a></li>
+                <li><a>Examples: Bob Barker, Bangkok, Button</a></li>
+                <li><a>Plural: Men, Woman, Ducks, Cities, Hands</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Verb</summary>
+              <ul class="p-2">
+                <li><a>Indicates an action</a></li>
+                  <li><a>Examples: Dodge, Dip, Duck, Dive, Dodge</a></li>
+                  <li><a>Add -ing: Dodging, Dipping, Ducking</a></li>
+                  <li><a>Past Tense: Most verbs add -ed to the end:
+                    Dodged, Jumped, Went, Gulped
+                  </a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>Adjective</summary>
+              <ul class="p-2">
+                <li><a>Describes a noun or pronoun</a></li>
+                <li><a>Examples: Big, Small, Hot, Cold, Blue, </a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary id="nav-adverb">Adverb</summary>
+              <ul class="p-2">
+                <li><a>Used to modify or describe a verb,
+                   adjective, another adverb, or entire sentence</a></li>
+                <li><a>Example: Quickly, Incredibly, Extremely, Slowly</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
       </div>
+    </div>
     </header>
+        
+      
+         
 
     <main class="flex justify-center items-center h-full my-8">
       <div class="card w-96 bg-secondary-content text-primary-content">
@@ -35,7 +160,7 @@
               <div class="modal-action">
                 <div id="input-elements"></div>
                 <form method="dialog" id="form-el">
-                  <button class="btn btn-outline btn-primary" type="submit" value="submit">Submit</button>
+                  <button class="btn btn-outline btn-primary" type="submit" value="submit" id="submit-btn">Submit</button>
                 </form>
               </div>
             </div>
