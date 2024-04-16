@@ -64,7 +64,7 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
         const inputLabelEl = document.createElement("label");
         inputLabelEl.classList.add(
           "block",
-          "text-gray",
+          "text-gray-700",
           "text-sm",
           "font-bold",
           "mb-2"
@@ -116,3 +116,24 @@ function searchUnsplashImages(query, clientId, perPage) {
       return data.results;
     });
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.querySelector('.toggle');
+  
+  if (localStorage.getItem('btn-theme') === 'true') {
+    btn.checked = true;
+  } else {
+    btn.checked = false;
+  }
+  
+  
+  btn.addEventListener('change', function() {
+    if (btn.checked) {
+      localStorage.setItem('btn-theme', true);
+    } else {
+      localStorage.removeItem('btn-theme');
+      localStorage.setItem('btn-theme', false);
+    }
+  });
+});
