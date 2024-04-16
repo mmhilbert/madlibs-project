@@ -7,11 +7,27 @@ const submitButton = document.getElementById("btn");
 formInputEl.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const formData = {};
-  const inputs = formInputEl.querySelectorAll('input[type="text"]');
+  
+
+  const formData = [];
+  const inputs = formInputDivEl.querySelectorAll('input[type="text"]');
   inputs.forEach((input) => {
     formData[input.id] = input.value;
   });
+
+  let isEmpty = false;
+ //loop for finding if any inputs are empty. pop modal if no input
+  inputs.forEach((input) => {
+    formData[input.id] = input.value;
+    if (input.value.trim() === "") {
+      isEmpty = true;
+    }
+  });
+
+  if (isEmpty) {
+    my_modal_1.showModal();
+    return
+  }
 
   const formDataJSON = JSON.stringify(formData);
 
@@ -111,3 +127,13 @@ function searchUnsplashImages(query, clientId, perPage) {
       return data.results;
     });
 }
+
+
+
+
+
+
+
+
+
+
