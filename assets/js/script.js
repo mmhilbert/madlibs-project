@@ -7,11 +7,26 @@ const submitButton = document.querySelector("#submit-btn");
 submitButton.addEventListener("click", function (event) {
   event.preventDefault();
 
+
   const formData = [];
   const inputs = formInputDivEl.querySelectorAll('input[type="text"]');
   inputs.forEach((input) => {
     formData.push(input.value);
   });
+
+  let isEmpty = false;
+ //loop for finding if any inputs are empty. pop modal if no input
+  inputs.forEach((input) => {
+    formData[input.id] = input.value;
+    if (input.value.trim() === "") {
+      isEmpty = true;
+    }
+  });
+
+  if (isEmpty) {
+    my_modal_1.showModal();
+    return
+  }
 
   const formDataJSON = JSON.stringify(formData);
 

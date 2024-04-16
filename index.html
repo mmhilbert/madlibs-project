@@ -14,17 +14,20 @@
   <body class="h-full">
 
     <header>
-      <input type="checkbox" value="coffee" class="toggle theme-controller"/>
+      
       <div class="navbar bg-base-100">
         <div class="navbar-start">
-          <div class ="flex justify-start">
+          <div class ="flex justify-start items-center">
           <a href="https://github.com/chroline/madlibs-api" target="_blank" class="btn btn-ghost" id="mad-btn">Madlibs</a>
+          <input type="checkbox" value="coffee" class="toggle theme-controller"/>
         </div>
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </div>
             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+
+              
 
               <li>
                 <a>Instructions</a>
@@ -148,7 +151,20 @@
       <div class="card w-96 bg-secondary-content text-primary-content">
         <div class="card-body">
           <h2 class="card-title text-neutral-content">Let the fun begin:</h2>
-        
+
+          <!--Input Modal if input is empty-->
+          <dialog id="my_modal_1" class="modal">
+          <div class="modal-box" id="inputModal">
+            <h3 class="font-bold text-lg" id="oopsH3">Oops!</h3>
+            <p id="oopsP" class="py-4">Please enter all input fields! Press close or esc key to exit.</p>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button id="inputBtn" class="btn justify-center">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
           <!-- sample input -->
           <!-- <p class="py-4">
                 <input
@@ -168,6 +184,8 @@
         </div>
       </div>
       </main>
+
+      
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/script.js"></script>

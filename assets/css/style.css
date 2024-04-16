@@ -53,6 +53,20 @@ input {
     border-radius: 10px;
 }
 
+#inputModal {
+    background-color: white;
+    color: black;
+}
+
+#oopsH3 {
+    font-size: 35px;
+    text-align: center
+}
+
+#oopsP {
+    font-size: 20px; 
+}
+
 
 
 .input-form {
@@ -65,8 +79,20 @@ input {
 }
 .modal-action {
     display: block;
-    margin: auto;
+    margin:  0 auto;
 }
+
+
+
+.modal-action {
+    text-align: center; /* Center align the contents */
+  }
+  
+  .modal-action button {
+    margin: 0 auto; /* Center the button horizontally */
+  }
+  
+
 .card {
     border: solid 1px black;
 }
