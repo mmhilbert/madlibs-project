@@ -81,7 +81,7 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
           "block",
           "text-sm",
           "font-bold",
-          "mb-2"
+          "mt-2"
         );
         inputDivEl.classList.add(`input-form`);
         inputLabelEl.setAttribute("for", `form-input-${i}`);
