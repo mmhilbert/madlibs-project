@@ -29,3 +29,22 @@ imageEl.setAttribute("src", imageUrl);
 const storyText = buildStory();
 console.log(`Story: ${storyText}`);
 storyEl.innerText = storyText;
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.querySelector(".toggle");
+
+  if (localStorage.getItem("btn-theme") === "true") {
+    btn.checked = true;
+  } else {
+    btn.checked = false;
+  }
+
+  btn.addEventListener("change", function () {
+    if (btn.checked) {
+      localStorage.setItem("btn-theme", true);
+    } else {
+      localStorage.removeItem("btn-theme");
+      localStorage.setItem("btn-theme", false);
+    }
+  });
+});
