@@ -85,8 +85,15 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
         );
         inputDivEl.classList.add(`input-form`);
         inputLabelEl.setAttribute("for", `form-input-${i}`);
-        inputLabelEl.innerText = `Enter a(n) ${apiResponse.blanks[i]}`;
 
+        let currentBlank = apiResponse.blanks[i];
+
+        if(currentBlank.charAt(0) === 'a' || currentBlank.charAt(0) === 'e' || currentBlank.charAt(0) === 'i' || currentBlank.charAt(0) === 'o' || currentBlank.charAt(0) === 'u') {
+          inputLabelEl.innerText = `Enter an ${currentBlank}`;
+        } else {
+          inputLabelEl.innerText = `Enter a ${currentBlank}`;
+        }
+        
         // Create input element
         const inputElement = document.createElement("input");
         inputElement.setAttribute("id", `form-input-${i}`);
