@@ -6,9 +6,7 @@ const imageEl = document.querySelector("#story-img");
 const storyEl = document.querySelector("#story-text");
 const titleEl = document.querySelector("#madlib-title");
 
-console.log(imageUrl);
-console.log(storyArray);
-console.log(inputArray);
+
 
 // Build the Mad Libs story using the story and user input arrays
 function buildStory() {
@@ -32,7 +30,7 @@ titleEl.textContent = storyTitle;
 
 // Setting the story to the stitched-together story text
 const storyText = buildStory();
-console.log(`Story: ${storyText}`);
+
 storyEl.innerHTML = storyText;
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -70,6 +70,12 @@ ul {
     /* background-color: black; */
     border-radius: 0;
 }
+label {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    
+}
 
 
 /* .dropdown-content {
@@ -137,6 +143,7 @@ ul {
     display: block;
     margin: auto;
     color: grey;
+    font-size: 120%;
 }
 .block {
     max-width: 186px;

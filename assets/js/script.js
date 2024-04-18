@@ -1,4 +1,3 @@
-console.log("madlib");
 const madLibsApiUrl = "https://madlibs-api.vercel.app/api/random";
 const formEl = document.querySelector("form");
 const formInputDivEl = document.querySelector("#input-elements");
@@ -51,17 +50,16 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
     const perPage = 1;
     const storyTitle = data.title;
 
-    console.log(`Story title: ${storyTitle}`);
+    
 
     // Save story title to local storage
     localStorage.setItem("storyTitle", storyTitle);
 
-    console.log(storyTitle);
     searchUnsplashImages(storyTitle, clientId, perPage)
       .then((images) => {
         images.forEach((image, index) => {
           localStorage.setItem("imageurl", image.urls.regular);
-          console.log(`Image ${index + 1}: ${image.urls.regular}`);
+          
         });
       })
       .then(buildForm(data))
@@ -79,9 +77,7 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
         const inputLabelEl = document.createElement("label");
         inputLabelEl.classList.add(
           "block",
-          "text-sm",
-          "font-bold",
-          "mt-2"
+          "accent"
         );
         inputDivEl.classList.add(`input-form`);
         inputLabelEl.setAttribute("for", `form-input-${i}`);
