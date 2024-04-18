@@ -66,10 +66,7 @@ li {
     z-index: 1;
 }
 
-ul {
-    /* background-color: black; */
-    border-radius: 0;
-}
+
 label {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -153,3 +150,4 @@ label {
     max-height: 80px; 
     margin-left: 5px;
 }
+
