@@ -33,7 +33,56 @@ const storyText = buildStory();
 
 storyEl.innerHTML = storyText;
 
+
+
+function generateStoryImage(storyText) {
+
+  if(storyText) {
+    const imageWrapper = document.getElementById('story-image-wrapper')
+    imageWrapper.innerHTML = '<p>Loading...</p>'
+    fetch('https://api.openai.com/v1/images/generations', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${SECRETS.api_key}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        'model': 'dall-e-3',
+        'prompt': `Please create an image to depict the following story. Please be dramatic ${storyText}`,
+        'n': 1
+      })
+    }).then(response => {
+      if(response.ok) {
+        return response.json()
+      } else {
+        throw response.status
+      }
+    }).then(data => {
+      console.log('success', data)
+      let image_url = data.data[0].url
+      let imageEl = document.createElement('img')
+      imageEl.setAttribute('src', image_url)
+      imageEl.setAttribute('alt', 'AI generated image')
+      imageEl.classList.add(
+        'h-96',
+        'items-center',
+        'justify-center',
+        'mx-auto',
+        'mt-10',
+        'object-contain')
+
+        imageWrapper.innerHTML= ""
+        imageWrapper.appendChild(imageEl)
+    
+    }).catch(e => {
+      imageWrapper.innerHTML = "<p>There was an error</p>"
+    })
+  }
+
+}
+
 document.addEventListener("DOMContentLoaded", function () {
+  generateStoryImage(storyText)
   const btn = document.querySelector(".toggle");
 
   if (localStorage.getItem("btn-theme") === "true") {
