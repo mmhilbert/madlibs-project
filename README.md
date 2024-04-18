@@ -15,11 +15,11 @@ Rad Libs is an interactive web application that brings the classic Mad Libs game
 
 ## Screenshots
 
-![Rad Libs Screenshot](link_to_screenshot)
+![Rad Libs Screenshot](assets/images/rad-libs-logo.png)
 
 ## Deployment
 
-The Rad Libs application is deployed on GitHub Pages. You can access it [here](Github-pages-link).
+The Rad Libs application is deployed on GitHub Pages. You can access it [here](https://mmhilbert.github.io/madlibs-project/).
 
 ## User Story
 
@@ -41,7 +41,7 @@ We developed Rad Libs to create a fun and engaging way for users to interact wit
 
 ### Task Breakdown
 
-- Nick Sokolowski: Frontend development, CSS styling
+- Nick Sokolowski: Frontend development (navbar), CSS styling, API integration, Javascript form validation
 - Larry Logan: Backend integration with APIs, JavaScript functionality
 - Meg Hilbert: Design, UX/UI, logo creation
 - Tom Burzynski: Backend integration with APIs, JavaScript functionality, README creation
