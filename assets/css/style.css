@@ -19,12 +19,12 @@ summary {
 }
 
 #story-text {
-    font-size: 140%;
+    font-size: 120%;
 }
 
 .text-decor {
     font-family: "Permanent Marker", cursive;
-    font-size: 180%;
+    font-size: 140%;
     margin-left: 5px;
     margin-right: 5px;
     text-decoration: underline;

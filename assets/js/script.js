@@ -77,7 +77,8 @@ fetch(`https://octoproxymus.herokuapp.com?secret=walrus&url=${madLibsApiUrl}`)
         const inputLabelEl = document.createElement("label");
         inputLabelEl.classList.add(
           "block",
-          "accent"
+          "accent",
+          "mt-2"
         );
         inputDivEl.classList.add(`input-form`);
         inputLabelEl.setAttribute("for", `form-input-${i}`);
