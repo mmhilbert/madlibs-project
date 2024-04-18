@@ -15,7 +15,13 @@ Rad Libs is an interactive web application that brings the classic Mad Libs game
 
 ## Screenshots
 
-![Rad Libs Screenshot](assets/images/rad-libs-logo.png)
+### Form
+
+![Rad Libs Form Page Screenshot](assets/images/story-form-screenshot.png)
+
+## Results
+
+![Rad Libs Results Page Screenshot](assets/images/story-results-screenshot.png)
 
 ## Deployment
 
