@@ -113,3 +113,8 @@ input {
 .block {
     max-width: 186px;
 }
+
+#radlogo {
+    max-height: 80px; 
+    margin-left: 5px;
+}

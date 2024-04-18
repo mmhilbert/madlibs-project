@@ -9,32 +9,28 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
-    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body class="h-full">
-    <header >
-      <div class="navbar bg-base-100 flex justify-between">
-        <h2 class="btn-ghost text-4xl my-3">Hello Mad Libs Game
-          <input type="checkbox" value="coffee" class="toggle theme-controller"/>
-
-        </h2>
-        <button
-          class="btn btn-active btn-accent mx-10" onclick="window.location.href='index.html'">Back</button>
+    <header class="flex justify-between">
+      
+      <div class="navbar">
+        <button class="btn btn-ghost text-4xl my-3">Hello Mad Libs Game</button>
+        <input type="checkbox" value="coffee" class="toggle theme-controller"/>
       </div>
-        <div class="flex items-center">
+
+      <div class="flex items-center">
+        <button class="btn btn-active btn-accent mx-10" onclick="window.location.href='index.html'">Back</button>
       </div>
 
     </header>
-
+    
     <section>
-      <h1 id="madlib-title" class="text-2xl text-center mt-10">
-        Title of Mad Libs Story
-      </h1>
+      <h1 id="madlib-title" class="text-2xl text-center mt-10">Title of Mad Libs Story</h1>
     </section>
 
     <main class="flex h-full my-8">
       <div class="lg:flex mx-20 gap-8">
+        
         <p class="text-center mb-5" id="story-text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
           laboriosam cumque reprehenderit at fuga soluta corporis ipsa quo porro
