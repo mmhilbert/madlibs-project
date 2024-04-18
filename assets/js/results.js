@@ -18,7 +18,7 @@ function buildStory() {
     storyText += storyArray[i];
 
     if (i < inputArray.length) {
-      storyText += inputArray[i];
+      storyText += `<span class="text-decor">${inputArray[i]}</span>`;
     }
   }
   return storyText;
@@ -33,7 +33,7 @@ titleEl.textContent = storyTitle;
 // Setting the story to the stitched-together story text
 const storyText = buildStory();
 console.log(`Story: ${storyText}`);
-storyEl.innerText = storyText;
+storyEl.innerHTML = storyText;
 
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.querySelector(".toggle");
