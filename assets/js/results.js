@@ -2,7 +2,7 @@ const imageUrl = localStorage.getItem("imageurl");
 const storyArray = JSON.parse(localStorage.getItem("storytext"));
 const inputArray = JSON.parse(localStorage.getItem("submittedData"));
 const storyTitle = localStorage.getItem("storyTitle");
-const imageEl = document.querySelector("img");
+const imageEl = document.querySelector("#story-img");
 const storyEl = document.querySelector("#story-text");
 const titleEl = document.querySelector("#madlib-title");
 

@@ -1,40 +1,37 @@
 summary {
-    margin-right: 10px;
-    font-size: 20px;
-    font-weight: bold;
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-
-
 .menu {
-    flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .navbar {
-    background-color: rgb(20, 20, 20);
-    border-bottom: solid 1px black;
+  background-color: rgb(20, 20, 20);
+  border-bottom: solid 1px black;
 }
 
 #mad-btn {
-    font-size: 50px; 
-    margin-left: -10px;
-    font-weight: bold;
+  font-size: 50px;
+  margin-left: -10px;
+  font-weight: bold;
 }
 
-img {
-    max-width: 100px;
-    max-height: 100px;
+.logo-img {
+  max-width: 100px;
+  max-height: 100px;
 }
 
 li {
-    z-index: 1;
+  z-index: 1;
 }
 
 ul {
-    /* background-color: black; */
-    border-radius: 0;
+  /* background-color: black; */
+  border-radius: 0;
 }
-
 
 /* .dropdown-content {
     position: absolute;
@@ -48,68 +45,63 @@ ul {
   } */
 
 #input-elements {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 input {
-   
-    all: unset;
-    margin: auto;
-    background-color: white;
-    border: solid 1px black;
-    border-radius: 10px;
+  all: unset;
+  margin: auto;
+  background-color: white;
+  border: solid 1px black;
+  border-radius: 10px;
 }
 
 #inputModal {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 #oopsH3 {
-    font-size: 35px;
-    text-align: center
+  font-size: 35px;
+  text-align: center;
 }
 
 #oopsP {
-    font-size: 20px; 
+  font-size: 20px;
 }
 
 .toggle {
-    margin-left: 15px;
+  margin-left: 15px;
 }
-
 
 .input-form {
-    color: rgb(100, 100, 100);
+  color: rgb(100, 100, 100);
 }
 .btn {
-    margin-left: 25%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-left: 25%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .modal-action {
-    display: block;
-    margin:  0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
-
-
 .modal-action {
-    text-align: center; /* Center align the contents */
-  }
-  
-  .modal-action button {
-    margin: 0 auto; /* Center the button horizontally */
-  }
-  
+  text-align: center; /* Center align the contents */
+}
+
+.modal-action button {
+  margin: 0 auto; /* Center the button horizontally */
+}
 
 .card {
-    border: solid 1px black;
+  border: solid 1px black;
 }
 .card-title {
-    display: block;
-    margin: auto;
-    color: grey;
+  display: block;
+  margin: auto;
+  color: grey;
 }
 .block {
-    max-width: 186px;
+  max-width: 186px;
 }
