@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+summary {
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#madlib-title {
+    font-size: 300%;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+#story-text {
+    font-size: 140%;
+}
+
+.text-decor {
+    font-family: "Permanent Marker", cursive;
+    font-size: 180%;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: underline;
+}
+
+.result-img {
+    margin-top: 50px;
+}
+
+.menu {
+    flex-wrap: nowrap;
+}
+
+.navbar {
+    background-color: rgb(20, 20, 20);
+    border-bottom: solid 1px black;
+}
+
+#mad-btn {
+    font-size: 50px; 
+    margin-left: -10px;
+    font-weight: bold;
+}
+
+/* img {
+    max-width: 100px;
+    max-height: 100px;
+} */
+input {
+   
+    all: unset;
+    margin: auto;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+li {
+    z-index: 1;
+}
+
+
+label {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    
+}
+
+
+/* .dropdown-content {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    display: none;
+    z-index: 1000;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  } */
+
+#input-elements {
+    margin-bottom: 10px;
+}
+
+#inputModal {
+    background-color: white;
+    color: black;
+}
+
+#oopsH3 {
+    font-size: 35px;
+    text-align: center
+}
+
+#oopsP {
+    font-size: 20px; 
+}
+
+.toggle {
+    margin-left: 15px;
+}
+
+
+.input-form {
+    color: rgb(100, 100, 100);
+}
+.btn {
+    margin-left: 25%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.modal-action {
+    display: block;
+    margin:  0 auto;
+}
+
+
+
+.modal-action {
+    text-align: center; /* Center align the contents */
+  }
+  
+  .modal-action button {
+    margin: 0 auto; /* Center the button horizontally */
+  }
+  
+
+.card {
+    border: solid 1px black;
+}
+.card-title {
+    display: block;
+    margin: auto;
+    color: grey;
+    font-size: 120%;
+}
+.block {
+    max-width: 186px;
+}
+
+#radlogo {
+    max-height: 80px; 
+    margin-left: 5px;
+}
+
