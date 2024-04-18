@@ -73,6 +73,9 @@ input {
     font-size: 20px; 
 }
 
+.toggle {
+    margin-left: 15px;
+}
 
 
 .input-form {
