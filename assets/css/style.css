@@ -4,13 +4,15 @@ summary {
     font-weight: bold;
 }
 
+
+
 .menu {
     flex-wrap: nowrap;
 }
 
 .navbar {
-    background-color: black;
-    
+    background-color: rgb(20, 20, 20);
+    border-bottom: solid 1px black;
 }
 
 #mad-btn {
@@ -29,7 +31,7 @@ li {
 }
 
 ul {
-    background-color: black;
+    /* background-color: black; */
     border-radius: 0;
 }
 
@@ -71,6 +73,9 @@ input {
     font-size: 20px; 
 }
 
+.toggle {
+    margin-left: 15px;
+}
 
 
 .input-form {
